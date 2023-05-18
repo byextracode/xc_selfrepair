@@ -27,7 +27,7 @@ CreateThread(function()
                 EndTextCommandSetBlipName(blip)
                 blips[i] = blip
             end
-            
+
             function point:nearby()
                 if self.isClosest then
                     if self.currentDistance <= 2.0 and cache.vehicle and not repairing then
@@ -38,7 +38,7 @@ CreateThread(function()
                         if IsControlJustPressed(0, 38) then
                             lib.hideTextUI()
                             textUI = nil
-                            
+
                             local data = {
                                 index = i,
                                 vehicle = cache.vehicle

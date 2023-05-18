@@ -95,7 +95,7 @@ local function repair(data)
             iconColor = '#ffff00'
         })
 	end
-	
+
 	local payment = lib.callback.await("selfRepair:pay", false, data)
 	if type(payment) == "string" then
 		return lib.notify({
@@ -110,10 +110,10 @@ local function repair(data)
             iconColor = '#C53030'
         })
 	end
-	
+
 	SetVehicleFixed(vehicle)
 	SetVehicleDeformationFixed(vehicle)
-	
+
 	lib.notify({
 		title = labelText("success"),
 		description = labelText("repair_finish"),
@@ -159,7 +159,7 @@ function selfRepairs(data)
 
 	data.duration = table.duration
 	data.fee = table.fee
-	
+
 	lib.registerContext({
 		id = "selfrepair",
 		title = labelText("context_menu"),
