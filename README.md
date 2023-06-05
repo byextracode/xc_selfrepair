@@ -7,7 +7,8 @@
 - Fix damaged vehicles.
 
 ## Preview
-- [Preview 1](https://streamable.com/fyk8qq)
+- Preview
+[![Preview 1](https://i.imgur.com/mH67OCy.png)](https://streamable.com/fyk8qq)
 
 ## Framework
 - ESX
