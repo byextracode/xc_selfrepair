@@ -1,6 +1,6 @@
 lib.callback.register("selfRepair:request", function(source, data)
-	local xPlayer = ESX.GetPlayerFromId(source)
-	if not xPlayer then
+	local Player = GetPlayerData(source)
+	if not Player then
 		return "error"
 	end
 	local index = data?.index
@@ -12,7 +12,7 @@ lib.callback.register("selfRepair:request", function(source, data)
 		return "error (data invalid)"
 	end
 	local price = table.fee
-	local enoughMoney = xPlayer.getAccount("money").money >= price
+	local enoughMoney = Player.GetMoney("money") >= price
 	if not enoughMoney then
 		return labelText("not_enough_money")
 	end
@@ -20,9 +20,8 @@ lib.callback.register("selfRepair:request", function(source, data)
 end)
 
 lib.callback.register("selfRepair:pay", function(source, data)
-	local source = source
-	local xPlayer = ESX.GetPlayerFromId(source)
-	if not xPlayer then
+	local Player = GetPlayerData(source)
+	if not Player then
 		return
 	end
 	local index = data?.index
@@ -34,6 +33,6 @@ lib.callback.register("selfRepair:pay", function(source, data)
 		return "error (data invalid)"
 	end
 	local price = table.fee
-	xPlayer.removeAccountMoney("money", price)
+	Player.RemoveMoney("money", price)
 	return true
 end)
