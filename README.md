@@ -11,10 +11,10 @@
 [![Preview 1](https://i.imgur.com/mH67OCy.png)](https://streamable.com/fyk8qq)
 
 ## Framework
-- ESX
+- ESX/QBCore
 
 ## Requirement
-- ESX
+- [ESX](https://github.com/esx-framework/esx_core) / [QBCore](https://github.com/qbcore-framework/qb-core)
 - [ox_lib](https://github.com/overextended/ox_lib)
 
 # Legal
